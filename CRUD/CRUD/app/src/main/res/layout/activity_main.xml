@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linear"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstname_input"
+        android:hint="Firstname :"
+        android:layout_margin="2dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:background="@android:color/holo_blue_light"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastname_input"
+        android:hint="Lastname :"
+        android:layout_margin="2dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:background="@android:color/holo_blue_light"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD STUDENT"
+        android:autoSizeTextType="uniform"
+        android:textColor="@android:color/holo_green_dark"
+        android:id="@+id/button_add"
+        android:onClick="btn_clik"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DELETE STUDENT"
+        android:textColor="@android:color/holo_red_dark"
+        android:autoSizeTextType="uniform"
+        android:id="@+id/btn_delete"
+        android:onClick="btn_clik"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UPDATE STUDENT"
+        android:textColor="@android:color/holo_blue_dark"
+        android:autoSizeTextType="uniform"
+        android:id="@+id/btn_update"
+        android:onClick="btn_clik"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#E2F306"
+        android:text="LIST STUDENTS"
+        android:autoSizeTextType="uniform"
+        android:id="@+id/list_students"
+        android:onClick="btn_clik"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="List Students :"
+        android:id="@+id/textView"
+        android:gravity="top|center"/>
+
+
+</LinearLayout>

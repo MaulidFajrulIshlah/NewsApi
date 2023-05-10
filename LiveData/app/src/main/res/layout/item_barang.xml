@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="produk"
+            type="com.geminiboy.livedata.ListBarang" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:background="@color/teal_700"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/namaProduk"
+                android:text="@{produk.namaProduk}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/harga"
+                android:text="@{produk.harga}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/namaProduk" />
+
+            <TextView
+                android:id="@+id/stokProduk"
+                android:text="@{produk.seller}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/harga" />
+
+            <ImageView
+                android:id="@+id/gambar"
+                android:layout_alignParentEnd="true"
+                android:imageResource="@{produk.img}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>
