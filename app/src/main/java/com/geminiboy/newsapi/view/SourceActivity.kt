@@ -29,6 +29,9 @@ class SourceActivity : AppCompatActivity() {
             binding.rvSource.adapter = sourceAdapter
 
         })
+
+        val datacat = intent.extras!!.getString("name")
+        sourceVm.callApiSource(datacat.toString())
     }
 
 }

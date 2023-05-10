@@ -1,5 +1,6 @@
 package com.geminiboy.newsapi.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,6 +30,12 @@ class CategoryActivity : AppCompatActivity() {
         binding.rvCategory.apply {
             layoutManager = LinearLayoutManager(this@CategoryActivity, LinearLayoutManager.VERTICAL, false)
             adapter = categoryAdapter
+            categoryAdapter.onClik={
+                var categ = it.name
+                val intent = Intent(context, SourceActivity::class.java)
+                intent.putExtra("name",categ)
+                startActivity(intent)
+            }
         }
     }
 }
