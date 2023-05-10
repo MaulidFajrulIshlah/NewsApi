@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Android-Login-And-Registration" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/AndroidPermission" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Binar-Challenge-CH-4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BottomNavigation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ChalChap2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ChalChap3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ChalChap4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ChalChap5" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ChallengeChapter4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Challenge_Chapter4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ChapterTigaKm4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DataBinding" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Firebase" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Latihan" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Latihan22032023" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Latihan2_Android" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Latihan2_Topic4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LatihanCHap3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LatihanNavComp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/MyApplication" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/NavigationComponent" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/NavigationDrawer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Note" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/NoteApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/NoteTalking" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/NotesApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/RecyclerView" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/RoomTopicLima" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Shopee" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/TabLayout" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Tugas-Kelompok-Dua" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Tugas080423" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Tugas1_Kelompok5" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/TugasDataBinding" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/TugasLogin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ViewModelExample" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/android-databinding" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/kotlin-android-retrofit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tugas_latihan_chapter3" vcs="Git" />
+  </component>
+</project>
