@@ -8,6 +8,9 @@ import com.geminiboy.newsapi.databinding.ItemCategoryBinding
 import com.geminiboy.newsapi.model.CategoryData
 
 class CategoryAdapter(var listCategory : List<CategoryData>) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
+
+    var onClik : ((CategoryData) -> Unit)? = null
+
     class ViewHolder(var binding : ItemCategoryBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,5 +27,8 @@ class CategoryAdapter(var listCategory : List<CategoryData>) : RecyclerView.Adap
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.binding.categoryName.text = listCategory[position].name
         Glide.with(holder.itemView).load(listCategory[position].picture).into(holder.binding.categoryImage)
+        holder.binding.rlcategory.setOnClickListener {
+            onClik!!.invoke(listCategory[position])
+        }
     }
 }
