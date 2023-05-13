@@ -8,7 +8,9 @@ import com.geminiboy.newsapi.R
 import com.geminiboy.newsapi.databinding.ActivityCategoryBinding
 import com.geminiboy.newsapi.model.CategoryData
 import com.geminiboy.newsapi.view.adapter.CategoryAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CategoryActivity : AppCompatActivity() {
     lateinit var binding: ActivityCategoryBinding
     lateinit var category : CategoryAdapter

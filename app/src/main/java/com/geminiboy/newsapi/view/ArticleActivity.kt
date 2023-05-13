@@ -10,7 +10,9 @@ import com.geminiboy.newsapi.R
 import com.geminiboy.newsapi.databinding.ActivityArticleBinding
 import com.geminiboy.newsapi.view.adapter.ArticleAdapter
 import com.geminiboy.newsapi.viewmodel.ArticleViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ArticleActivity : AppCompatActivity() {
     lateinit var binding: ActivityArticleBinding
     lateinit var artadapter: ArticleAdapter

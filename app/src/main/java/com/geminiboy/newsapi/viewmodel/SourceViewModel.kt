@@ -4,12 +4,15 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.geminiboy.newsapi.model.source.ResponseDataSource
 import com.geminiboy.newsapi.model.source.Source
+import com.geminiboy.newsapi.network.ApiService
 import com.geminiboy.newsapi.network.NetworkClient
+import dagger.hilt.android.lifecycle.HiltViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
-class SourceViewModel : ViewModel() {
+import javax.inject.Inject
+@HiltViewModel
+class SourceViewModel @Inject constructor(var api : ApiService) : ViewModel() {
 
     lateinit var liveDataSource : MutableLiveData<List<Source>?>
 
@@ -22,7 +25,7 @@ class SourceViewModel : ViewModel() {
     }
 
     fun callApiSource(category: String){
-        NetworkClient.instance.getAllSources(category).enqueue(object : Callback<ResponseDataSource>{
+        api.getAllSources(category).enqueue(object : Callback<ResponseDataSource>{
             override fun onResponse(
                 call: Call<ResponseDataSource>,
                 response: Response<ResponseDataSource>

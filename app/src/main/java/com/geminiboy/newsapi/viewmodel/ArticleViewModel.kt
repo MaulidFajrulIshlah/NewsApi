@@ -4,12 +4,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.geminiboy.newsapi.model.articel.Article
 import com.geminiboy.newsapi.model.articel.ResponseArticles
+import com.geminiboy.newsapi.network.ApiService
 import com.geminiboy.newsapi.network.NetworkClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
-class ArticleViewModel : ViewModel() {
+class ArticleViewModel  @Inject constructor(var api : ApiService) : ViewModel() {
 
     lateinit var liveDataArticle : MutableLiveData<List<Article>>
 
@@ -22,7 +24,7 @@ class ArticleViewModel : ViewModel() {
     }
 
     fun callApiArticle(article : String){
-        NetworkClient.instance.gellAllArticles(article).enqueue(object : Callback<ResponseArticles>{
+        api.gellAllArticles(article).enqueue(object : Callback<ResponseArticles>{
             override fun onResponse(
                 call: Call<ResponseArticles>,
                 response: Response<ResponseArticles>
