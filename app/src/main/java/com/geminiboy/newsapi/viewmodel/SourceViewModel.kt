@@ -2,7 +2,8 @@ package com.geminiboy.newsapi.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.geminiboy.newsapi.model.Source
+import com.geminiboy.newsapi.model.source.ResponseDataSource
+import com.geminiboy.newsapi.model.source.Source
 import com.geminiboy.newsapi.network.NetworkClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -16,28 +17,28 @@ class SourceViewModel : ViewModel() {
         liveDataSource = MutableLiveData()
     }
 
-    fun getDataSource() : MutableLiveData<List<Source>?>{
+    fun getDataSource():MutableLiveData<List<Source>?> {
         return liveDataSource
     }
 
-    fun callApiSource(category : String){
-        NetworkClient.instance.getAllSources(category)
-            .enqueue(object :Callback<List<Source>>{
-                override fun onResponse(
-                    call: Call<List<Source>>,
-                    response: Response<List<Source>>
-                ) {
-                    if (response.isSuccessful){
-                        liveDataSource.postValue(response.body())
-                    }else{
-                        liveDataSource.postValue(null)
-                    }
-                }
+    fun callApiSource(category: String){
+        NetworkClient.instance.getAllSources(category).enqueue(object : Callback<ResponseDataSource>{
+            override fun onResponse(
+                call: Call<ResponseDataSource>,
+                response: Response<ResponseDataSource>
+            ) {
+                if (response.isSuccessful){
+                    liveDataSource.postValue(response.body()!!.sources)
 
-                override fun onFailure(call: Call<List<Source>>, t: Throwable) {
-                    liveDataSource.value = emptyList()
+                }else{
+                    liveDataSource.postValue(null)
                 }
+            }
 
-            })
+            override fun onFailure(call: Call<ResponseDataSource>, t: Throwable) {
+                liveDataSource.postValue(null)
+            }
+
+        })
     }
 }

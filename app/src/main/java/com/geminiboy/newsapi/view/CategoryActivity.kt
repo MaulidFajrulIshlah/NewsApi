@@ -7,10 +7,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.geminiboy.newsapi.R
 import com.geminiboy.newsapi.databinding.ActivityCategoryBinding
 import com.geminiboy.newsapi.model.CategoryData
+import com.geminiboy.newsapi.view.adapter.CategoryAdapter
 
 class CategoryActivity : AppCompatActivity() {
     lateinit var binding: ActivityCategoryBinding
-    lateinit var categoryAdapter: CategoryAdapter
+    lateinit var category : CategoryAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCategoryBinding.inflate(layoutInflater)
@@ -26,16 +27,19 @@ class CategoryActivity : AppCompatActivity() {
             CategoryData("TECHNOLOGY",R.drawable.technology)
         )
 
-        categoryAdapter = CategoryAdapter(listCategory)
+        category = CategoryAdapter(listCategory)
         binding.rvCategory.apply {
-            layoutManager = LinearLayoutManager(this@CategoryActivity, LinearLayoutManager.VERTICAL, false)
-            adapter = categoryAdapter
-            categoryAdapter.onClik={
+            layoutManager =LinearLayoutManager(this@CategoryActivity, LinearLayoutManager.VERTICAL,false)
+            adapter = category
+
+            category.onClick={
                 var categ = it.name
-                val intent = Intent(context, SourceActivity::class.java)
-                intent.putExtra("name",categ)
+                val intent = Intent(context,SourceActivity::class.java)
+                intent.putExtra("name", categ)
                 startActivity(intent)
             }
+
         }
+
     }
 }
