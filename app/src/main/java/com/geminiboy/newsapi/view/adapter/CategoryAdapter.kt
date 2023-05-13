@@ -1,11 +1,14 @@
 package com.geminiboy.newsapi.view.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.geminiboy.newsapi.databinding.ItemCategoryBinding
+import com.geminiboy.newsapi.databinding.ItemSourceBinding
 import com.geminiboy.newsapi.model.CategoryData
+import com.geminiboy.newsapi.model.source.Source
 
 class CategoryAdapter(var listCategory : List<CategoryData>):RecyclerView.Adapter<CategoryAdapter.ViewHolder>(){
 

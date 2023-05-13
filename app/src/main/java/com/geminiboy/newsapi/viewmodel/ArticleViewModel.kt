@@ -17,12 +17,12 @@ class ArticleViewModel : ViewModel() {
         liveDataArticle = MutableLiveData()
     }
 
-    fun getDataArticle() : MutableLiveData<List<Article>> {
+    fun getDataArticle() : MutableLiveData<List<Article>>{
         return liveDataArticle
     }
 
     fun callApiArticle(article : String){
-        NetworkClient.instance.gellAllArticles(article).enqueue(object : Callback<ResponseArticles> {
+        NetworkClient.instance.gellAllArticles(article).enqueue(object : Callback<ResponseArticles>{
             override fun onResponse(
                 call: Call<ResponseArticles>,
                 response: Response<ResponseArticles>
@@ -33,11 +33,17 @@ class ArticleViewModel : ViewModel() {
                 }else{
                     liveDataArticle.postValue(null)
                 }
+
+
             }
 
             override fun onFailure(call: Call<ResponseArticles>, t: Throwable) {
+
                 liveDataArticle.postValue(null)
+
             }
+
         })
+
     }
 }
