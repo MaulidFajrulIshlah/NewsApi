@@ -17,6 +17,6 @@ interface ApiService {
     @GET("top-headlines")
     fun gellAllArticles(
         @Query("sources") sources : String,
-        @Query("apiKey") apiKey : String = "9fdc48da878d45d79c0bc09860d72ac3"
+        @Query("apiKey") apiKey : String = "714300b24b154d22bf7a8929b8a92eee"
     ) : Call<ResponseArticles>
 }
